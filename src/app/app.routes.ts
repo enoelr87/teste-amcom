@@ -2,10 +2,10 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'admissao',
     loadComponent: () =>
-      import('./components/layout/layout.component').then(
-        (m) => m.LayoutComponent
-      ),
+      import(
+        './components/cooperative-member/cooperative-member.component'
+      ).then((m) => m.CooperativeMemberComponent),
   },
 ];

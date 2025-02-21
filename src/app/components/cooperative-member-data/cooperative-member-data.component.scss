@@ -1,0 +1,65 @@
+.register-situation-member {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border: 1px solid #333;
+    background-color: #fff;
+    padding: 10px;
+    width: 300px;
+
+    .register-situation-member-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        .title {
+            font-size: 20px;
+            font-weight: 400;
+            color: #333;
+        }
+    
+        .subtitle {
+            font-size: 14px;
+            color: #333;
+        }
+    }
+
+    .register-situation-member-body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        .name, .cpf-situation {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                color: #333;
+            }
+
+            .name-data, .cpf-situation-data {
+                display: flex;
+                flex-direction: column;
+
+                span:first-child {
+                    font-size: 14px;
+                    color: #666;
+                }
+
+                span:last-child {
+                    font-size: 18px;
+                    color: #333;
+                }
+            }
+        }
+    }
+}

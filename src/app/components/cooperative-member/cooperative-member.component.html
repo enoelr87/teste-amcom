@@ -1,0 +1,32 @@
+<div class="cooperative-member">
+    <div class="cooperative-member-header">
+        <div class="title">
+            Informe o CPF do futuro cooperado (a)
+        </div>
+        <div class="subtitle">
+            Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente. Digite apenas os números (sem pontos ou traços).
+        </div>
+    </div>
+    <div class="cooperative-member-body">
+        <form [formGroup]="cooperativeMemberForm" (ngSubmit)="consultCPF()">
+            <div class="cooperative-member-form">
+                <div class="input-cpf-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" placeholder="000.000.000-00" formControlName="cpf" maxlength="14" appCpfMask>
+                </div>
+                <button type="submit" [disabled]="cooperativeMemberForm.invalid">Consultar por CPF</button>
+            </div>
+        </form>
+        <div class="errors">
+            @if(cooperativeMemberForm.get('cpf')?.errors?.['required']) {
+                <span>CPF obrigatório</span>
+            }
+            @if(cooperativeMemberForm.get('cpf')?.errors?.['pattern']) {
+                <span>CPF inválido</span>
+            }
+        </div>
+        @if(showCooperativeMemberData) {
+            <app-cooperative-member-data></app-cooperative-member-data>
+        }
+    </div>
+</div>

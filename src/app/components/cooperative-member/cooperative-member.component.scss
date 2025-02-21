@@ -1,0 +1,73 @@
+.cooperative-member {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+
+    .cooperative-member-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        .title {
+            font-size: 20px;
+            font-weight: 400;
+            color: #333;
+        }
+    
+        .subtitle {
+            font-size: 14px;
+            color: #333;
+        }
+    }
+
+    .cooperative-member-body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        .cooperative-member-form {
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .input-cpf-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+
+            input {
+                width: 300px;
+                height: 40px;
+                border: 1px solid #333;
+                padding: 0 10px;
+                font-size: 14px;
+                color: #333;
+            }
+        }
+
+        button {
+            width: 250px;
+            height: 42px;
+            background-color: #165C7D;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+
+            &:disabled {
+                background-color: #ccc;
+                cursor: not-allowed;
+            }
+        }
+
+        .errors {
+            height: 40px;
+            font-size: 12px;
+            color: #F44336;
+        }
+    }
+}
