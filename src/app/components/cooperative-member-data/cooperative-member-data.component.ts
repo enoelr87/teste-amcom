@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, effect, input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faUser, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { UserSituation } from '../../core/interfaces/user.interface';
 
 @Component({
   selector: 'app-cooperative-member-data',
@@ -11,4 +12,12 @@ import { faUser, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 export class CooperativeMemberDataComponent {
   faUser = faUser;
   faCheckCircle = faCheckCircle;
+
+  userData = input.required<UserSituation>();
+
+  constructor() {
+    effect(() => {
+      console.log(this.userData());
+    });
+  }
 }

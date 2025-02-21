@@ -12,4 +12,37 @@
             height: 50px;
         }
     }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 14px;
+                color: #333;
+                text-decoration: none;
+
+                fa-icon {
+                    color: #fff;
+                    font-size: 20px;
+                }
+
+                span {
+                    display: none;
+                    font-size: 14px;
+                    color: #fff;
+                }
+            }
+        }
+    }
 }

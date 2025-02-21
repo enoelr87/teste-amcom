@@ -3,11 +3,13 @@
         <img src="assets/images/logo.png" alt="logo">
     </div>
     <ul>
-        <li>
-            <a routerLink="/admissao">Admissão</a>
-        </li>
-        <li>
-            <a routerLink="/expediente">Expediente</a>
-        </li>
+        @for(menuItem of menuItems; track $index) {
+            <li>
+                <a routerLink="{{menuItem.url}}">
+                    <fa-icon [icon]="menuItem.icon" size="lg"></fa-icon>
+                    <span>{{menuItem.name}}</span>
+                </a>
+            </li>
+        }
     </ul>
 </div>

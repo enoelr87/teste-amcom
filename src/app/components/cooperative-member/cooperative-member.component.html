@@ -12,21 +12,21 @@
             <div class="cooperative-member-form">
                 <div class="input-cpf-group">
                     <label for="cpf">CPF</label>
-                    <input type="text" placeholder="000.000.000-00" formControlName="cpf" maxlength="14" appCpfMask>
+                    <input type="text" placeholder="000.000.000-00" formControlName="cpf" maxlength="14" appCpfMask (input)="clearErrorMessage()">
                 </div>
                 <button type="submit" [disabled]="cooperativeMemberForm.invalid">Consultar por CPF</button>
             </div>
         </form>
         <div class="errors">
-            @if(cooperativeMemberForm.get('cpf')?.errors?.['required']) {
-                <span>CPF obrigatório</span>
+            @if(getErrorMessage('cpf')) {
+                <span>{{getErrorMessage('cpf')}}</span>
             }
-            @if(cooperativeMemberForm.get('cpf')?.errors?.['pattern']) {
-                <span>CPF inválido</span>
+            @if(errorMessage) {
+                <span>{{errorMessage}}</span>
             }
         </div>
-        @if(showCooperativeMemberData) {
-            <app-cooperative-member-data></app-cooperative-member-data>
+        @if(userData && errorMessage === '') {
+            <app-cooperative-member-data [userData]="userData"></app-cooperative-member-data>
         }
     </div>
 </div>
