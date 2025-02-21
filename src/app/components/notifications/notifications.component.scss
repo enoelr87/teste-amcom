@@ -1,0 +1,17 @@
+#notifications {
+    position: relative;
+    .bag {
+        position: absolute;
+        top: -10px;
+        right: -5px;
+        width: 15px;
+        height: 15px;
+        background-color: #F44336;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

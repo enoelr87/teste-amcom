@@ -1,0 +1,50 @@
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+
+    .user-name {
+        span {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-right: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #333;
+            padding: 5px 10px;
+            border-radius: 10px;
+
+            &:hover {
+                color: #165C7D;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    .user-settings {
+        span {
+            font-size: 14px;
+            color: #333;
+        }
+        img {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #333;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: all 0.3s ease-in-out;
+                border: 1px solid #165C7D;
+                border-radius: 50%;
+            }   
+        }
+    }
+}
