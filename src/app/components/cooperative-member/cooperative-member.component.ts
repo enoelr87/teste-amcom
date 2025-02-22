@@ -9,7 +9,7 @@ import { CooperativeMemberDataComponent } from '../cooperative-member-data/coope
 import { CpfMaskDirective } from '../../core/directives/cpf-mask.directive';
 import { SearchUserService } from '../../core/services/search-user.service';
 import { UserSituation } from '../../core/interfaces/user.interface';
-import { StepperComponent } from '../stepper/stepper.component';
+import { StepperComponent } from '../../shared/components/stepper/stepper.component';
 
 @Component({
   selector: 'app-cooperative-member',
