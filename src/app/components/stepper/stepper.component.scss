@@ -1,0 +1,55 @@
+.stepper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+
+    .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: auto;
+
+        .step-label {
+            font-size: 14px;
+            color: #333;
+            text-wrap-mode: nowrap;
+        }
+
+        .step-status {
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                border: 2px solid #ccc;
+                border-radius: 50%;
+                background-color: #333;
+                color: #fff;
+                font-size: 14px;
+
+                &.current {
+                    border: 2px solid #165C7D;
+                    background-color: #ccc;
+                }
+                &.uncoming {
+                    background-color: #ccc;
+                }
+                &.completed {
+                    background-color: #165C7D;
+                }
+            }
+        }
+    }
+
+    .step-line {
+        width: 100%;
+        height: 4px;
+        background: #ccc;
+    }
+}

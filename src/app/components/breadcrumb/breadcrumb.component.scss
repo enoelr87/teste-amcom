@@ -1,0 +1,22 @@
+.breadcrumb-list {
+    ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            a {
+                font-size: 14px;
+                color: #333;
+                margin: 10px;
+                text-decoration: none;
+
+                &.active {
+                    color: #165C7D;
+                }
+            }
+        }
+    }
+}

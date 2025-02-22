@@ -1,0 +1,12 @@
+<div class="breadcrumb-list">
+    <ul>
+        @for (item of breadCrumbs; track $index) {
+            <li>
+                <a [routerLink]="item.url">
+                    {{item.name}}
+                </a>
+            </li>
+            <li>/</li>
+        }
+    </ul>
+</div>

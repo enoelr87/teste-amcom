@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'admissao', pathMatch: 'full' },
   {
     path: 'admissao',
     loadComponent: () =>

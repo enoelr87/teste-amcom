@@ -2,7 +2,17 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
+    gap: 20px;
+
+    .stepper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        .stepper-container {
+            width: 800px;   
+        }
+    }
 
     .cooperative-member-header {
         display: flex;

@@ -1,0 +1,15 @@
+<div class="stepper">
+    @for (item of steps; track $index) {
+        <div class="step">
+            <div class="step-status">
+                <span [class]="item.status"></span>
+            </div>
+            <div class="step-label">
+                {{item.label}}
+            </div>
+        </div>
+        @if($index < steps.length - 1) {
+            <div class="step-line"></div>
+        }
+    }
+</div>

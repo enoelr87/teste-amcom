@@ -1,15 +1,17 @@
 <div class="menu">
-    <div class="logo">
-        <img src="assets/images/logo.png" alt="logo">
+    <div class="menu-items">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="logo">
+        </div>
+        <ul>
+            @for(menuItem of menuItems; track $index) {
+                <li>
+                    <a routerLink="{{menuItem.url}}" routerLinkActive="active">
+                        <fa-icon [icon]="menuItem.icon" size="lg"></fa-icon>
+                        <span>{{menuItem.name}}</span>
+                    </a>
+                </li>
+            }
+        </ul>
     </div>
-    <ul>
-        @for(menuItem of menuItems; track $index) {
-            <li>
-                <a routerLink="{{menuItem.url}}">
-                    <fa-icon [icon]="menuItem.icon" size="lg"></fa-icon>
-                    <span>{{menuItem.name}}</span>
-                </a>
-            </li>
-        }
-    </ul>
 </div>

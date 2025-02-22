@@ -9,6 +9,7 @@ import { CooperativeMemberDataComponent } from '../cooperative-member-data/coope
 import { CpfMaskDirective } from '../../core/directives/cpf-mask.directive';
 import { SearchUserService } from '../../core/services/search-user.service';
 import { UserSituation } from '../../core/interfaces/user.interface';
+import { StepperComponent } from '../stepper/stepper.component';
 
 @Component({
   selector: 'app-cooperative-member',
@@ -16,6 +17,7 @@ import { UserSituation } from '../../core/interfaces/user.interface';
     ReactiveFormsModule,
     CooperativeMemberDataComponent,
     CpfMaskDirective,
+    StepperComponent,
   ],
   templateUrl: './cooperative-member.component.html',
   styleUrl: './cooperative-member.component.scss',
@@ -28,7 +30,7 @@ export class CooperativeMemberComponent {
       Validators.pattern(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/),
     ]),
   });
-  userData!: UserSituation;
+  userData: UserSituation | null = null;
 
   errorMessage!: string;
 
@@ -59,10 +61,12 @@ export class CooperativeMemberComponent {
             this.errorMessage = '';
           } else {
             this.errorMessage = 'Usuário não encontrado';
+            this.userData = null;
           }
         },
         error: (err) => {
           this.errorMessage = 'Erro ao consultar o usuário';
+          this.userData = null;
         },
       });
     }
